@@ -7,6 +7,9 @@ lspconfig.jedi_language_server.setup {}
 lspconfig.gopls.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.clangd.setup {}
+lspconfig.omnisharp.setup {
+    cmd = { "dotnet", "/home/jonot/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll"}
+}
 -- lspconfig.rust_analyzer.setup {}
 
 -- require 'lsp_signature'.setup {}

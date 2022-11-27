@@ -10,6 +10,7 @@ require 'config.neogit'
 require 'config.lspconfig' 
 require 'config.treesitter' 
 require 'config.tree' 
+require 'config.toggleterm'
 
 local o = vim.o
 
@@ -17,4 +18,4 @@ o.expandtab = true
 o.smartindent = true
 o.tabstop = 4
 o.shiftwidth = 4
-
+o.nu = true

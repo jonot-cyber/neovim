@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-lsputils'
     use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
+    use 'akinsho/toggleterm.nvim'
 
 	-- Themes
 	use 'rafamadriz/neon'

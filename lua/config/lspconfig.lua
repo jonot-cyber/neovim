@@ -12,7 +12,7 @@ lspconfig.omnisharp.setup {
 }
 -- lspconfig.rust_analyzer.setup {}
 
--- require 'lsp_signature'.setup {}
+require 'lsp_signature'.setup {}
 
 local opts = {
 	noremap = true,

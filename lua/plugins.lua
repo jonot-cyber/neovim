@@ -22,5 +22,15 @@ return require('packer').startup(function(use)
 
 	-- Themes
 	use 'rafamadriz/neon'
+    use 'indika-dev/eclipse.nvim'
     use 'folke/tokyonight.nvim'
+    use 'sainnhe/gruvbox-material'
+    use 'shaunsingh/nord.nvim'
+    use 'sainnhe/edge'
+    use 'Mofiqul/vscode.nvim'
+    use 'doums/darcula'
+    use 'mhartington/oceanic-next'
+    use 'rose-pine/neovim'
+    use 'joshdick/onedark.vim'
+    use 'tanvirtin/monokai.nvim'
 end)

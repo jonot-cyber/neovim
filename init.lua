@@ -1,16 +1,21 @@
 require 'plugins' 
 
-require 'config.cmp' 
+if not vim.o.readonly then
+    require 'config.cmp'
+    require 'config.neogit'
+    require 'config.toggleterm'
+    require 'config.tree'
+    require 'config.neogit'
+    require 'config.pairs'
+    require 'config.mason'
+end
+
 require 'config.theme'
 require 'config.line'
 require 'config.keys'
-require 'config.mason'
-require 'config.pairs'
-require 'config.neogit'
 require 'config.lspconfig' 
 require 'config.treesitter' 
-require 'config.tree' 
-require 'config.toggleterm'
+
 
 local o = vim.o
 

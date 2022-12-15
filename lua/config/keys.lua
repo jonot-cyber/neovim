@@ -4,20 +4,20 @@ local opt = {
 }
 
 local keybinds = {
-    ["<Leader>b"] = ":lua require('telescope.builtin').buffers()<CR>",
-    ["<Leader>f"] = ":lua require('telescope.builtin').find_files()<CR>",
-    ["<Leader>th"] = ":lua require('telescope.builtin').colorscheme()<CR>",
+    ["<M-t>b"]  = ":lua require('telescope.builtin').buffers()<CR>",
+    ["<M-t>f"]  = ":lua require('telescope.builtin').find_files()<CR>",
+    ["<M-t>t"] = ":lua require('telescope.builtin').colorscheme()<CR>",
+    ["<M-x>"] = ":Telescope<CR>",
 
-    ["<Leader>te"] = ":ToggleTerm<CR>",
+    ["<M-l>e"] = ":lua vim.diagnostic.open_float()<CR>",
+    ["<M-l>c"] = ":lua vim.lsp.buf.code_action()<CR>",
+    ["<M-l>r"] = ":lua vim.lsp.buf.rename()<CR>",
+
+    ["<leader>t"] = ":ToggleTerm<CR>",
+    ["<leader>g"] = ":Neogit<CR>",
     ["<C-n>"] = ":NvimTreeToggle<CR>",
     ["<C-s>"] = ":w<CR>",
 }
-
--- vim.cmd [[nnoremap <Leader>b :lua require('telescope.builtin').buffers()<CR>]]
--- vim.cmd [[nnoremap <C-n> :NvimTreeToggle<CR>]]
--- vim.cmd [[nnoremap <Leader>f :lua require 'telescope.builtin'.find_files()<CR>]]
--- vim.cmd [[nnoremap <Leader>t :ToggleTerm<CR>]]
--- vim.cmd [[nnoremap <C-s> :w<CR>]] ]--
 
 for key, val in pairs(keybinds) do
     vim.api.nvim_set_keymap("n", key, val, {})

@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 	use 'RishabhRD/nvim-lsputils'
     use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
     use 'akinsho/toggleterm.nvim'
+    use 'f-person/git-blame.nvim'
 
 	-- Themes
 	use 'rafamadriz/neon'
@@ -33,4 +34,8 @@ return require('packer').startup(function(use)
     use 'rose-pine/neovim'
     use 'joshdick/onedark.vim'
     use 'tanvirtin/monokai.nvim'
+    use 'projekt0n/github-nvim-theme'
+    use 'Shatur/neovim-ayu'
+    use 'catppuccin/nvim'
+
 end)

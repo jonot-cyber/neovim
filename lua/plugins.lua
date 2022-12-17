@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     use 'rcarriga/nvim-dap-ui'
     use 'kylechui/nvim-surround'
     use 'eraserhd/parinfer-rust'
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'rafamadriz/friendly-snippets'
 
 	-- Themes
 	use 'rafamadriz/neon'

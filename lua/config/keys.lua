@@ -17,6 +17,7 @@ local keybinds = {
     ["<leader>g"] = ":Neogit<CR>",
     ["<C-n>"] = ":NvimTreeToggle<CR>",
     ["<C-s>"] = ":w<CR>",
+
 }
 
 for key, val in pairs(keybinds) do

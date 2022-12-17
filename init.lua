@@ -10,6 +10,8 @@ if not vim.o.readonly then
     require 'config.mason'
 end
 
+require 'config.dap'
+require 'config.go'
 require 'config.theme'
 require 'config.line'
 require 'config.keys'

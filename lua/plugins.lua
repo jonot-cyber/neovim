@@ -20,6 +20,9 @@ return require('packer').startup(function(use)
     use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
     use 'akinsho/toggleterm.nvim'
     use 'f-person/git-blame.nvim'
+    use 'ray-x/go.nvim'
+    use 'mfussenegger/nvim-dap'
+    use 'rcarriga/nvim-dap-ui'
 
 	-- Themes
 	use 'rafamadriz/neon'

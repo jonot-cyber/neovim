@@ -12,6 +12,7 @@ if not vim.o.readonly then
     require 'config.snippets'
     require 'config.cmp'
     require 'config.latex'
+    require 'config.fold'
 end
 
 require 'config.theme'

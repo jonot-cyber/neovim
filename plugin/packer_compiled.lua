@@ -79,10 +79,20 @@ _G.packer_plugins = {
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
     url = "https://github.com/antoinemadec/FixCursorHold.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   darcula = {
     loaded = true,
@@ -99,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/edge",
     url = "https://github.com/sainnhe/edge"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["git-blame.nvim"] = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
@@ -108,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
+  },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
   },
   ["gruvbox-material"] = {
     loaded = true,
@@ -179,6 +199,16 @@ _G.packer_plugins = {
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
   ["nvim-lightbulb"] = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-lightbulb",
@@ -194,6 +224,11 @@ _G.packer_plugins = {
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-lsputils",
     url = "https://github.com/RishabhRD/nvim-lsputils"
   },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -203,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -224,6 +264,11 @@ _G.packer_plugins = {
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["parinfer-rust"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/parinfer-rust",
+    url = "https://github.com/eraserhd/parinfer-rust"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -233,6 +278,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jonot/.local/share/nvim/site/pack/packer/start/popfix",
     url = "https://github.com/RishabhRD/popfix"
+  },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
   },
   ["telescope.nvim"] = {
     loaded = true,

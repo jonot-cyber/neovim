@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     use 'ray-x/go.nvim'
     use 'mfussenegger/nvim-dap'
     use 'rcarriga/nvim-dap-ui'
+    use 'kylechui/nvim-surround'
 
 	-- Themes
 	use 'rafamadriz/neon'

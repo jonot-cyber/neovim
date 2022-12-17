@@ -11,6 +11,7 @@ if not vim.o.readonly then
     require 'config.go'
     require 'config.snippets'
     require 'config.cmp'
+    require 'config.latex'
 end
 
 require 'config.theme'

@@ -17,6 +17,7 @@ require 'config.line'
 require 'config.keys'
 require 'config.lspconfig' 
 require 'config.treesitter' 
+require 'config.surround'
 
 
 local o = vim.o

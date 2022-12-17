@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-dap'
     use 'rcarriga/nvim-dap-ui'
     use 'kylechui/nvim-surround'
+    use 'eraserhd/parinfer-rust'
 
 	-- Themes
 	use 'rafamadriz/neon'

@@ -9,7 +9,7 @@ lspconfig.tsserver.setup {}
 lspconfig.clangd.setup {}
 lspconfig.angularls.setup {}
 lspconfig.omnisharp.setup {
-    cmd = { "dotnet", "/home/jonot/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll"}
+    cmd = { 'dotnet', '/home/jonot/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll'}
 }
 lspconfig.jdtls.setup {}
 lspconfig.texlab.setup {}

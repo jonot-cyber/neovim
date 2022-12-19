@@ -22,4 +22,4 @@ local opts = {
 	silent = true,
 }
 
-require 'config.lsphandlers'
+-- require 'config.lsphandlers'

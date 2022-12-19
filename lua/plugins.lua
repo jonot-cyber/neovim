@@ -17,10 +17,22 @@ return require('packer').startup(function(use)
 	use 'ray-x/lsp_signature.nvim'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-lsputils'
-    use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
+    use {
+        'TimUntersberger/neogit',
+        requires = 'nvim-lua/plenary.nvim',
+        config = function()
+            require("neogit").setup()
+        end
+    }
     use 'akinsho/toggleterm.nvim'
     use 'f-person/git-blame.nvim'
-    use 'ray-x/go.nvim'
+    use {
+        'ray-x/go.nvim',
+        ft = {"go"},
+        config = function()
+            require("go").setup()
+        end
+    }
     use 'mfussenegger/nvim-dap'
     use 'rcarriga/nvim-dap-ui'
     use 'kylechui/nvim-surround'

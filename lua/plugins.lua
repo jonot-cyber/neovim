@@ -4,7 +4,13 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'nvim-treesitter/nvim-treesitter'
-	use 'nvim-tree/nvim-tree.lua'
+	use {
+        'nvim-tree/nvim-tree.lua',
+        cmd = "NvimTreeToggle",
+        config = function()
+            require("config.tree")
+        end
+    }
 	use 'nvim-tree/nvim-web-devicons'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'

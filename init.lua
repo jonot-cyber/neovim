@@ -1,7 +1,7 @@
 require 'plugins' 
 
 require 'config.toggleterm'
-require 'config.tree'
+-- require 'config.tree'
 require 'config.pairs'
 require 'config.mason'
 require 'config.dap'

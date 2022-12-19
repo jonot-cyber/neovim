@@ -1,7 +1,12 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'neovim/nvim-lspconfig'
-	use 'hrsh7th/nvim-cmp'
+	use {
+        'hrsh7th/nvim-cmp',
+        config = function()
+            require("config.cmp")
+        end
+    }
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'nvim-treesitter/nvim-treesitter'
 	use {
@@ -31,7 +36,13 @@ return require('packer').startup(function(use)
             require("neogit").setup()
         end
     }
-    use 'akinsho/toggleterm.nvim'
+    use {
+        'akinsho/toggleterm.nvim',
+        cmd = "ToggleTerm",
+        config = function()
+            require("config.toggleterm")
+        end
+    }
     use 'f-person/git-blame.nvim'
     use {
         'ray-x/go.nvim',
@@ -40,19 +51,42 @@ return require('packer').startup(function(use)
             require("go").setup()
         end
     }
-    use 'mfussenegger/nvim-dap'
-    use 'rcarriga/nvim-dap-ui'
+
+    use {
+        'rcarriga/nvim-dap-ui',
+        requires = 'mfussenegger/nvim-dap',
+        config = function()
+            require("dapui")
+            require("config.dap")
+        end
+    }
     use 'kylechui/nvim-surround'
     use 'eraserhd/parinfer-rust'
-    use 'L3MON4D3/LuaSnip'
+    use {
+        'L3MON4D3/LuaSnip',
+        config = function()
+            require("config.snippets")
+        end
+    }
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async',
+        config = function()
+            require("config/fold")
+        end
+    }
 
 	-- Themes
 	use 'rafamadriz/neon'
     use 'indika-dev/eclipse.nvim'
-    use 'folke/tokyonight.nvim'
+    use {
+        'folke/tokyonight.nvim',
+        config = function()
+            require("config.theme")
+        end
+    }
     use 'sainnhe/gruvbox-material'
     use 'shaunsingh/nord.nvim'
     use 'sainnhe/edge'

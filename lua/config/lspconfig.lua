@@ -17,9 +17,9 @@ lspconfig.texlab.setup {}
 
 require 'lsp_signature'.setup {}
 
-local opts = {
+--[[local opts = {
 	noremap = true,
 	silent = true,
-}
+}]]--
 
 -- require 'config.lsphandlers'

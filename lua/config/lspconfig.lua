@@ -1,8 +1,7 @@
 local lspconfig = require 'lspconfig'
 
 lspconfig.cssls.setup {}
--- lspconfig.emmet_ls.setup {}
-lspconfig.html.setup {}
+lspconfig.emmet_ls.setup {}
 lspconfig.pyright.setup {}
 lspconfig.gopls.setup {}
 lspconfig.tsserver.setup {}

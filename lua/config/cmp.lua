@@ -15,12 +15,10 @@ cmp.setup {
                 cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
-            elseif has_words_before() then
-                cmp.complete()
             else
                 fallback()
             end
-        end, {'i', 's'})
+        end, {"i", "s"})
     },
     sources = cmp.config.sources {
         { name = 'nvim_lsp' },

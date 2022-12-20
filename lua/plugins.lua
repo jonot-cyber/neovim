@@ -104,25 +104,29 @@ return require('packer').startup(function(use)
     }
 
 	-- Themes
-	use 'rafamadriz/neon'
-    use 'indika-dev/eclipse.nvim'
     use {
-        'folke/tokyonight.nvim',
+        "catppuccin/nvim",
+        as = "catppuccin",
         config = function()
-            require("config.theme")
+            vim.cmd("colorschem catppuccin")
         end
     }
-    use 'sainnhe/gruvbox-material'
-    use 'shaunsingh/nord.nvim'
-    use 'sainnhe/edge'
-    use 'Mofiqul/vscode.nvim'
-    use 'doums/darcula'
-    use 'mhartington/oceanic-next'
-    use 'rose-pine/neovim'
-    use 'joshdick/onedark.vim'
-    use 'tanvirtin/monokai.nvim'
-    use 'projekt0n/github-nvim-theme'
-    use 'Shatur/neovim-ayu'
-    use 'catppuccin/nvim'
-
+    use "rebelot/kanagawa.nvim"
+    use "EdenEast/nightfox.nvim"
+    use "projekt0n/github-nvim-theme"
+    use "ellisonleao/gruvbox.nvim"
+    use "marko-cerovac/material.nvim"
+    use "shaunsingh/nord.nvim"
+    use "olimorris/onedarkpro.nvim"
+    use "savq/melange"
+    use "Mofiqul/vscode.nvim"
+    use "tiagovla/tokyodark.nvim"
+    use "glepnir/zephyr-nvim"
+    use "tanvirtin/monokai.nvim"
+    use "ray-x/aurora"
+    use "Iron-E/nvim-highlite"
+    use "Yagua/nebulous.nvim"
+    use "NTBBloodbath/doom-one.nvim"
+    use "ishan9299/nvim-solarized-lua"
+    use "rafamadriz/neon"
 end)

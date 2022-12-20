@@ -82,6 +82,19 @@ return require('packer').startup(function(use)
             require("config/fold")
         end
     }
+    -- Packer
+    use {
+        "jackMort/ChatGPT.nvim",
+        cmd = "ChatGPT",
+        config = function()
+            require("chatgpt").setup()
+        end,
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    }
 
 	-- Themes
 	use 'rafamadriz/neon'

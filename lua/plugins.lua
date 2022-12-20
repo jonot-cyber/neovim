@@ -95,6 +95,13 @@ return require('packer').startup(function(use)
             "nvim-telescope/telescope.nvim"
         }
     }
+    use {
+        'norcalli/nvim-colorizer.lua',
+        ft = {"css", "scss", "sass"},
+        config = function()
+            require("colorizer").setup()
+        end,
+    }
 
 	-- Themes
 	use 'rafamadriz/neon'

@@ -107,8 +107,10 @@ return require('packer').startup(function(use)
     use {
         "catppuccin/nvim",
         as = "catppuccin",
+        cmd = "RandomTheme",
         config = function()
-            vim.cmd("colorschem catppuccin")
+            vim.cmd("colorscheme catppuccin")
+            require("config.theme")
         end
     }
     use "rebelot/kanagawa.nvim"

@@ -100,12 +100,9 @@ _G.packer_plugins = {
     url = "https://github.com/ray-x/aurora"
   },
   catppuccin = {
-    commands = { "RandomTheme" },
-    config = { "\27LJ\2\n[\0\0\3\0\5\0\b6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\3\0'\2\4\0B\0\2\1K\0\1\0\17config.theme\frequire\27colorscheme catppuccin\bcmd\bvim\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/jonot/.local/share/nvim/site/pack/packer/opt/catppuccin",
+    config = { "\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17config.theme\frequire\0" },
+    loaded = true,
+    path = "/home/jonot/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-nvim-lsp"] = {
@@ -393,36 +390,19 @@ time([[Config for nvim-ufo]], false)
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\n*\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\15config.cmp\frequire\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17config.theme\frequire\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'ToggleTerm', function(cmdargs)
-          require('packer.load')({'toggleterm.nvim'}, { cmd = 'ToggleTerm', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'toggleterm.nvim'}, { cmd = 'ToggleTerm' }, _G.packer_plugins)
-          return vim.fn.getcompletion('ToggleTerm ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'ChatGPT', function(cmdargs)
-          require('packer.load')({'ChatGPT.nvim'}, { cmd = 'ChatGPT', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'ChatGPT.nvim'}, { cmd = 'ChatGPT' }, _G.packer_plugins)
-          return vim.fn.getcompletion('ChatGPT ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'NvimTreeToggle', function(cmdargs)
           require('packer.load')({'nvim-tree.lua'}, { cmd = 'NvimTreeToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'nvim-tree.lua'}, { cmd = 'NvimTreeToggle' }, _G.packer_plugins)
           return vim.fn.getcompletion('NvimTreeToggle ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'RandomTheme', function(cmdargs)
-          require('packer.load')({'catppuccin'}, { cmd = 'RandomTheme', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'catppuccin'}, { cmd = 'RandomTheme' }, _G.packer_plugins)
-          return vim.fn.getcompletion('RandomTheme ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'Neogit', function(cmdargs)
           require('packer.load')({'neogit'}, { cmd = 'Neogit', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -431,16 +411,30 @@ pcall(vim.api.nvim_create_user_command, 'Neogit', function(cmdargs)
           require('packer.load')({'neogit'}, { cmd = 'Neogit' }, _G.packer_plugins)
           return vim.fn.getcompletion('Neogit ', 'cmdline')
       end})
+pcall(vim.api.nvim_create_user_command, 'ChatGPT', function(cmdargs)
+          require('packer.load')({'ChatGPT.nvim'}, { cmd = 'ChatGPT', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'ChatGPT.nvim'}, { cmd = 'ChatGPT' }, _G.packer_plugins)
+          return vim.fn.getcompletion('ChatGPT ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'ToggleTerm', function(cmdargs)
+          require('packer.load')({'toggleterm.nvim'}, { cmd = 'ToggleTerm', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'toggleterm.nvim'}, { cmd = 'ToggleTerm' }, _G.packer_plugins)
+          return vim.fn.getcompletion('ToggleTerm ', 'cmdline')
+      end})
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType scss ++once lua require("packer.load")({'nvim-colorizer.lua'}, { ft = "scss" }, _G.packer_plugins)]]
 vim.cmd [[au FileType sass ++once lua require("packer.load")({'nvim-colorizer.lua'}, { ft = "sass" }, _G.packer_plugins)]]
 vim.cmd [[au FileType go ++once lua require("packer.load")({'go.nvim'}, { ft = "go" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'nvim-colorizer.lua'}, { ft = "css" }, _G.packer_plugins)]]
+vim.cmd [[au FileType scss ++once lua require("packer.load")({'nvim-colorizer.lua'}, { ft = "scss" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

@@ -107,9 +107,7 @@ return require('packer').startup(function(use)
     use {
         "catppuccin/nvim",
         as = "catppuccin",
-        cmd = "RandomTheme",
         config = function()
-            vim.cmd("colorscheme catppuccin")
             require("config.theme")
         end
     }

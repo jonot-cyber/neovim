@@ -96,6 +96,13 @@ require("lazy").setup({
 		config = function()
 			require("lualine").setup()
 		end,
+	},
+	{
+		"folke/trouble.nvim",
+		dependencies = {"nvim-tree/nvim-web-devicons"},
+		init = function()
+			require("trouble").setup({})
+		end,
 	}
 })
 

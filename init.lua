@@ -16,8 +16,15 @@ require("lazy").setup({
 		build = function()
 			vim.cmd("TSUpdate")
 		end,
-		config = function()
+		init = function()
 			require("nvim-treesitter.configs").setup({})
 		end
-	}
+	},
+	{
+		"williamboman/mason.nvim",
+		cmd = {"Mason", "MasonInstall", "MasonLog", "MasonUninstall", "MasonUninstallAll"},
+		config = function()
+			require("mason").setup()
+		end,
+	},
 })

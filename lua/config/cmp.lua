@@ -59,3 +59,4 @@ cmp.setup({
     }
 })
 
+vim.cmd("LspStart")

@@ -39,6 +39,7 @@ require("lazy").setup({
             "williamboman/mason.nvim", 
             "neovim/nvim-lspconfig"
         },
+        event = "VeryLazy",
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -92,19 +93,10 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {"nvim-tree/nvim-web-devicons"},
-        enabled = true,
 		config = function()
 			require("lualine").setup()
 		end,
 	},
-    {
-        "feline-nvim/feline.nvim",
-        enabled = false,
-        config = function()
-            vim.o.termguicolors = true
-            require("feline").setup()
-        end,
-    },
 	{
 		"folke/trouble.nvim",
 		dependencies = {"nvim-tree/nvim-web-devicons"},

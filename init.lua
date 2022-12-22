@@ -66,6 +66,28 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 		},
 	},
+	{
+		"nvim-tree/nvim-tree.lua",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		cmd = {
+			"NvimTreeClipboard",
+			"NvimTreeClose",
+			"NvimTreeCollapse",
+			"NvimTreeCollapseKeepBuffers",
+			"NvimTreeFindFile",
+			"NvimTreeFindFileToggle",
+			"NvimTreeFocus",
+			"NvimTreeOpen",
+			"NvimTreeRefresh",
+			"NvimTreeResize",
+			"NvimTreeToggle",
+		},
+		config = function()
+			require("nvim-tree").setup()
+		end
+	}
 })
 
 vim.cmd("colorscheme catppuccin")

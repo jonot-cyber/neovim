@@ -19,7 +19,11 @@ require("lazy").setup({
 		end,
 		event = "VeryLazy",
 		config = function()
-			require("nvim-treesitter.configs").setup({})
+			require("nvim-treesitter.configs").setup({
+				highlight = {
+					enable = true,
+				}
+			})
 		end
 	},
 	{
@@ -32,6 +36,7 @@ require("lazy").setup({
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = {"williamboman/mason.nvim", "neovim/nvim-lspconfig"},
+		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup()
 
@@ -44,6 +49,7 @@ require("lazy").setup({
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
+			"neovim/nvim-lspconfig",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -100,7 +106,13 @@ require("lazy").setup({
 	{
 		"folke/trouble.nvim",
 		dependencies = {"nvim-tree/nvim-web-devicons"},
-		init = function()
+		cmd = {
+			"Trouble",
+			"TroubleClose",
+			"TroubleRefresh",
+			"TroubleToggle",
+		},
+		config = function()
 			require("trouble").setup({})
 		end,
 	}

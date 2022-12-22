@@ -298,6 +298,10 @@ require("lazy").setup({
             })
         end,
     },
+    {
+        "folke/which-key.nvim",
+        lazy = true,
+    }
 })
 
 vim.o.expandtab = true
@@ -312,3 +316,4 @@ vim.o.smartindent = true
 vim.o.tabstop = 4
 
 vim.cmd("colorscheme catppuccin")
+require("mapping")

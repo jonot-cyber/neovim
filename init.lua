@@ -257,7 +257,21 @@ require("lazy").setup({
 				end
 			})
 		end,
-	}
+	},
+    {
+        "stevearc/dressing.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("dressing").setup()
+        end,
+    },
+    {
+        "TimUntersberger/neogit",
+        cmd = "Neogit",
+        config = function()
+            require("neogit").setup({})
+        end,
+    }
 })
 
 vim.o.expandtab = true

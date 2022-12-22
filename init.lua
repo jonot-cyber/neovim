@@ -293,7 +293,9 @@ require("lazy").setup({
         "norcalli/nvim-colorizer.lua",
         ft = {"css", "scss", "sass"},
         config = function()
-            require("colorizer").setup()
+            require("colorizer").setup({
+                "css";
+            })
         end,
     },
 })

@@ -271,6 +271,23 @@ require("lazy").setup({
         config = function()
             require("neogit").setup({})
         end,
+    },
+    {
+        "jackMort/ChatGPT.nvim",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+        },
+        cmd = {
+            "ChatGPT",
+            "ChatGPTActAs",
+            "ChatGPTEditWithInstructions",
+            "ChatGPTInlineEdit",
+        },
+        config = function()
+            require("chatgpt").setup()
+        end,
     }
 })
 

@@ -115,6 +115,12 @@ require("lazy").setup({
 		config = function()
 			require("trouble").setup({})
 		end,
+	},
+	{
+		"akinsho/toggleterm.nvim",
+		init = function()
+			require("toggleterm").setup()
+		end,
 	}
 })
 

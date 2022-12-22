@@ -288,7 +288,14 @@ require("lazy").setup({
         config = function()
             require("chatgpt").setup()
         end,
-    }
+    },
+    {
+        "norcalli/nvim-colorizer.lua",
+        ft = {"css", "scss", "sass"},
+        config = function()
+            require("colorizer").setup()
+        end,
+    },
 })
 
 vim.o.expandtab = true

@@ -137,6 +137,13 @@ require("lazy").setup({
 		config = function()
 			require("bufferline").setup()
 		end,
+	},
+	{
+		"numToStr/Comment.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("Comment").setup()
+		end,
 	}
 })
 

@@ -118,10 +118,18 @@ require("lazy").setup({
 	},
 	{
 		"akinsho/toggleterm.nvim",
-		init = function()
+		cmd = {
+			"ToggleTerm",
+			"ToggleTermSendCurrentLine",
+			"ToggleTermSendVisualLines",
+			"ToggleTermSendVisualSelection",
+			"ToggleTermSetName",
+			"ToggleTermToggleAll",
+		},
+		config = function()
 			require("toggleterm").setup()
 		end,
-	}
+	},
 })
 
 vim.cmd("colorscheme catppuccin")

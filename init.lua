@@ -193,7 +193,49 @@ require("lazy").setup({
 		config = function()
 			require("nvim-surround").setup({})
 		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = {"mfussenegger/nvim-dap"},
+		init = function()
+			local dap = require("dap")
+
+			dap.adapters.delve = {
+				type = "server",
+				port = "${port}",
+				executable = {
+					command = "dlv",
+					args = {"dap", "-l", "127.0.0.1:${port}"}
+				}
+			}
+
+			dap.configurations.go = {
+				{
+					type = "delve",
+					name = "Debug",
+					request = "launch",
+					program = "${file}",
+				},
+				{
+					type = "delve",
+					name = "Debug test",
+					request = "launch",
+					mode = "test",
+					program = "${file}"
+				},
+				{
+					type = "delve",
+					name = "Debug test (go.mod)",
+					request = "launch",
+					mode = "test",
+					program = "./${relativeFileDirname}"
+				},
+			}
+			require("dapui").setup({})
+		end,
 	}
 })
+
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 vim.cmd("colorscheme catppuccin")

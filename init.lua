@@ -185,6 +185,14 @@ require("lazy").setup({
 		config = function()
 			require("lsp_signature").setup({})
 		end,
+	},
+	{
+		"kylechui/nvim-surround",
+		event = "InsertEnter",
+		keys = {"ys", "ds", "cs"},
+		config = function()
+			require("nvim-surround").setup({})
+		end,
 	}
 })
 

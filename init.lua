@@ -36,7 +36,6 @@ require("lazy").setup({
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = {"williamboman/mason.nvim", "neovim/nvim-lspconfig"},
-		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup()
 
@@ -53,11 +52,13 @@ require("lazy").setup({
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
+			"onsails/lspkind.nvim",
 		},
 		config = function()
 			local cmp = require("cmp")
 			require("mason-lspconfig")
 			require("luasnip.loaders.from_vscode").lazy_load()
+			local lspkind = require("lspkind")
 			local luasnip = require("luasnip")
 
 			cmp.setup({
@@ -85,7 +86,18 @@ require("lazy").setup({
 							fallback()
 						end
 					end, {"i", "s"}),
-				})
+				}),
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = "symbol",
+						maxwidth = 50,
+						ellipsis_char = "...",
+
+						before = function(entry, vim_item)
+							return vim_item
+						end
+					})
+				}
 			})
 		end,
 	},

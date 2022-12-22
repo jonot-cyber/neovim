@@ -58,7 +58,14 @@ require("lazy").setup({
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-	}
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		cmd = "Telescope",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
 })
 
 vim.cmd("colorscheme catppuccin")

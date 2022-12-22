@@ -35,12 +35,10 @@ require("lazy").setup({
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		dependencies = {"williamboman/mason.nvim", "neovim/nvim-lspconfig"},
-		config = function()
-			require("mason-lspconfig").setup()
-
-			require("lspconfig").gopls.setup({})
-		end,
+		dependencies = {
+            "williamboman/mason.nvim", 
+            "neovim/nvim-lspconfig"
+        },
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -94,11 +92,19 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {"nvim-tree/nvim-web-devicons"},
-		lazy = false,
+        enabled = true,
 		config = function()
 			require("lualine").setup()
 		end,
 	},
+    {
+        "feline-nvim/feline.nvim",
+        enabled = false,
+        config = function()
+            vim.o.termguicolors = true
+            require("feline").setup()
+        end,
+    },
 	{
 		"folke/trouble.nvim",
 		dependencies = {"nvim-tree/nvim-web-devicons"},
@@ -166,7 +172,24 @@ require("lazy").setup({
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = {"mfussenegger/nvim-dap"},
-		init = function()
+        keys = {
+            "<leader>dt",
+            "<leader>db",
+        },
+        cmd = {
+            "DapContinue",
+            "DapLoadLaunchJSON",
+            "DapRestartFrame",
+            "DapSetLogLevel",
+            "DapShowLog",
+            "DapStepInto",
+            "DapStepOut",
+            "DapStepOver",
+            "DapTerminate",
+            "DapToggleBreakpoint",
+            "DapToggleRepl",
+        },
+		config = function()
             require("config.dap")
 		end,
 	},

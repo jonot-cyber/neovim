@@ -17,7 +17,8 @@ require("lazy").setup({
 		build = function()
 			vim.cmd("TSUpdate")
 		end,
-		init = function()
+		event = "VeryLazy",
+		config = function()
 			require("nvim-treesitter.configs").setup({})
 		end
 	},

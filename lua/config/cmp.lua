@@ -3,8 +3,28 @@ local lspkind = require("lspkind")
 local luasnip = require("luasnip")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
-require("mason-lspconfig").setup()
-require("lspconfig").gopls.setup({})
+require("mason")
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "tsserver",
+        "emmet_ls",
+        "sqls",
+        "pylsp",
+        "jdtls",
+        "bashls",
+        "omnisharp",
+        "omnisharp_mono",
+        "clang",
+        "gopls",
+        ""
+    },
+})
+require("mason-lspconfig").setup_handlers({
+    function (server_name)
+        require("lspconfig")[server_name].setup({})
+    end,
+})
+
 require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())

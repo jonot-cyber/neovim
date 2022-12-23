@@ -1,4 +1,4 @@
-local dap = require("dap")
+require("dap")
 require("mason").setup()
 require("mason-nvim-dap").setup({
     automatic_setup = true,

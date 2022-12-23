@@ -256,6 +256,22 @@ require("lazy").setup({
             require("gitsigns").setup()
         end,
     },
+    {
+        "ziontee113/syntax-tree-surfer",
+        cmd = {
+            "STSSelectMasterNode",
+            "STSSelectCurrentNode",
+            "STSSelectNextSiblingNode",
+            "STSSelectPrevSiblingNode",
+            "STSSelectParentNode",
+            "STSSelectChildNode",
+            "STSSwapNextVisual",
+            "STSSwapPrevVisual",
+        },
+        config = function()
+            require("syntax-tree-surfer")
+        end,
+    },
 })
 
 vim.o.expandtab = true

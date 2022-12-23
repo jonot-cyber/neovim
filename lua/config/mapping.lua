@@ -92,4 +92,17 @@ wk.register({
             "Format Document",
         }
     },
+    ["vx"] = {
+        "<cmd>STSSelectMasterNode<cr>",
+        "Select Master Node",
+    },
+    ["vn"] = {
+        "<cmd>STSSelectCurrentNode<cr>",
+        "Select Master Node",
+    },
 })
+
+vim.api.nvim_set_keymap("x", "J", '<cmd>STSSelectNextSiblingNode<cr>', {})
+vim.api.nvim_set_keymap("x", "K", '<cmd>STSSelectPrevSiblingNode<cr>', {})
+vim.api.nvim_set_keymap("x", "H", '<cmd>STSSelectParentNode<cr>', {})
+vim.api.nvim_set_keymap("x", "L", '<cmd>STSSelectChildNode<cr>', {})

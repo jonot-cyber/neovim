@@ -73,4 +73,19 @@ wk.register({
             },
         }
     },
+    g = {
+        name = "LSP Actions",
+        h = {
+            "<cmd>Lspsaga lsp_finder<cr>",
+            "Find symbol",
+        },
+        a = {
+            "<cmd>Lspsaga code_action<cr>",
+            "Code Action",
+        },
+        r = {
+            "<cmd>Lspsaga rename<cr>",
+            "Rename symbol",
+        },
+    },
 })

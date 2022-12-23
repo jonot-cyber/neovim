@@ -245,6 +245,10 @@ require("lazy").setup({
         "jay-babu/mason-nvim-dap.nvim",
         lazy = true,
     },
+    {
+        "glepnir/lspsaga.nvim",
+        lazy = true,
+    }
 })
 
 vim.o.expandtab = true

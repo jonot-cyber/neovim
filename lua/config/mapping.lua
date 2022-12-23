@@ -87,5 +87,9 @@ wk.register({
             "<cmd>Lspsaga rename<cr>",
             "Rename symbol",
         },
+        f = {
+            function() vim.lsp.buf.format() end,
+            "Format Document",
+        }
     },
 })

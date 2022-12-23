@@ -248,7 +248,14 @@ require("lazy").setup({
     {
         "glepnir/lspsaga.nvim",
         lazy = true,
-    }
+    },
+    {
+        "lewis6991/gitsigns.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("gitsigns").setup()
+        end,
+    },
 })
 
 vim.o.expandtab = true

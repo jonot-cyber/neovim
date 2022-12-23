@@ -14,9 +14,9 @@ require("mason-lspconfig").setup({
         "bashls",
         "omnisharp",
         "omnisharp_mono",
-        "clang",
+        "clangd",
         "gopls",
-        ""
+        "sumneko_lua",
     },
 })
 require("mason-lspconfig").setup_handlers({

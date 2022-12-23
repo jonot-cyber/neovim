@@ -26,6 +26,7 @@ mason_lspconfig.setup_handlers({
         lspconfig[server_name].setup({})
     end,
 })
+lspconfig["gdscript"].setup({})
 
 require("luasnip.loaders.from_vscode").lazy_load()
 

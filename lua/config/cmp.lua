@@ -1,10 +1,12 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 local luasnip = require("luasnip")
+local lspconfig = require("lspconfig")
+local mason_lspconfig = require("mason-lspconfig")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
 require("mason")
-require("mason-lspconfig").setup({
+mason_lspconfig.setup({
     ensure_installed = {
         "tsserver",
         "emmet_ls",
@@ -19,9 +21,9 @@ require("mason-lspconfig").setup({
         "sumneko_lua",
     },
 })
-require("mason-lspconfig").setup_handlers({
+mason_lspconfig.setup_handlers({
     function (server_name)
-        require("lspconfig")[server_name].setup({})
+        lspconfig[server_name].setup({})
     end,
 })
 

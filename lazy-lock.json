@@ -36,6 +36,7 @@
   "syntax-tree-surfer": { "branch": "master", "commit": "d6d518f48dcc4441b11ee3e6cefd48fa1e09568a" },
   "telescope.nvim": { "branch": "master", "commit": "e960efa60e97df58e089b00270f09d60f27202c8" },
   "toggleterm.nvim": { "branch": "main", "commit": "b02a1674bd0010d7982b056fd3df4f717ff8a57a" },
+  "treesj": { "branch": "main", "commit": "9afe7983ce6351936a81d57adac651dc8f16c20b" },
   "trouble.nvim": { "branch": "main", "commit": "897542f90050c3230856bc6e45de58b94c700bbf" },
   "which-key.nvim": { "branch": "main", "commit": "61553aeb3d5ca8c11eea8be6eadf478062982ac9" }
 }

@@ -272,6 +272,12 @@ require("lazy").setup({
             require("syntax-tree-surfer")
         end,
     },
+    {
+        "Wansmer/treesj",
+        config = function()
+            require("treesj").setup()
+        end,
+    }
 })
 
 vim.o.expandtab = true

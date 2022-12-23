@@ -6,4 +6,3 @@ require("mason-nvim-dap").setup({
 require("mason-nvim-dap").setup_handlers()
 
 require("dapui").setup({})
-

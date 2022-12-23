@@ -33,7 +33,7 @@ require("lazy").setup({
 			require("mason").setup()
 		end,
 	},
-	{
+    {
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = {
             "williamboman/mason.nvim", 
@@ -43,7 +43,7 @@ require("lazy").setup({
 	},
 	{
 		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		event = {"InsertEnter", "VeryLazy"},
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
@@ -240,7 +240,11 @@ require("lazy").setup({
     {
         "folke/which-key.nvim",
         lazy = true,
-    }
+    },
+    {
+        "jay-babu/mason-nvim-dap.nvim",
+        lazy = true,
+    },
 })
 
 vim.o.expandtab = true

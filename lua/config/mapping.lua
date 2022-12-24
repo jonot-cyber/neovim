@@ -38,37 +38,41 @@ wk.register({
     ["<C-c>"] = {
         name = "Telescope",
         f = {
-            function() require("telescope.builtin").find_files() end,
+            "<cmd>Telescope find_files<cr>",
             "Find Files"
         },
         s = {
-            function() require("telescope.builtin").live_grep() end,
+            "<cmd>Telescope live_grep<cr>",
             "Search For Something",
         },
         b = {
-            function() require("telescope.builtin").buffers() end,
+            "<cmd>Telescope buffers<cr>",
             "Switch to Buffer",
         },
         c = {
-            function() require("telescope.builtin").commands() end,
+            "<cmd>Telescope commands<cr>",
             "Command Pallete",
+        },
+        d = {
+            "<cmd>Telescope<cr>",
+            "Default",
         },
         l = {
             name = "LSP",
             r = {
-                function() require("telescope.builtin").lsp_references() end,
+                "<cmd>Telescope lsp_references<cr>",
                 "Find Refreences",
             },
             s = {
-                function() require("telescope.builtin").lsp_dynamic_workspace_symbols() end,
+                "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
                 "Symbols",
             },
             i = {
-                function() require("telescope.builtin").lsp_implementations() end,
+                "<cmd>Telescope lsp_implementations<cr>",
                 "Implementations",
             },
             d = {
-                function() require("telescope.builtin").lsp_definitions() end,
+                "<cmd>Telescope lsp_definitions<cr>",
                 "Definitions",
             },
         }

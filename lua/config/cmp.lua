@@ -68,6 +68,9 @@ cmp.setup({
                 fallback()
             end
         end, { "i", "s" }),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+            fallback()
+        end)
     }),
     formatting = {
         format = lspkind.cmp_format({

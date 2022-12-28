@@ -58,10 +58,6 @@ require("lazy").setup({
         end,
     },
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-    },
-    {
         "nvim-telescope/telescope.nvim",
         cmd = "Telescope",
         dependencies = {
@@ -234,6 +230,7 @@ require("lazy").setup({
         config = function()
             require("colorizer").setup({
                 "css";
+                "scss";
             })
         end,
     },
@@ -282,7 +279,15 @@ require("lazy").setup({
         config = function()
             require("treesj").setup()
         end,
-    }
+    },
+
+    -- themes
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+    },
+    "tomasiser/vim-code-dark",
+    "sainnhe/gruvbox-material",
 })
 
 vim.o.expandtab = true
@@ -295,6 +300,17 @@ vim.o.nu = true
 vim.o.shiftwidth = 4
 vim.o.smartindent = true
 vim.o.tabstop = 4
+vim.g.material_style = "palenight"
 
 vim.cmd("colorscheme catppuccin")
 require("config.mapping")
+
+-- This makes indentation work properly
+-- in filetypes that are not natively
+-- supported by neovim
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = {"*.dart", "*.kt"},
+    callback = function(ev)
+        vim.api.nvim_buf_set_option(0, "cindent", true)
+    end
+})

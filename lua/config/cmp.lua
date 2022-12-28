@@ -11,7 +11,7 @@ mason_lspconfig.setup({
         "tsserver",
         "emmet_ls",
         "sqls",
-        "pylsp",
+        "pyright",
         "jdtls",
         "bashls",
         "omnisharp",

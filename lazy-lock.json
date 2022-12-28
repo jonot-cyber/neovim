@@ -10,6 +10,7 @@
   "dressing.nvim": { "branch": "master", "commit": "4436d6f41e2f6b8ada57588acd1a9f8b3d21453c" },
   "friendly-snippets": { "branch": "main", "commit": "1a6a02350568d6830bcfa167c72f9b6e75e454ae" },
   "gitsigns.nvim": { "branch": "main", "commit": "2ab3bdf0a40bab53033048c6be75bda86316b55d" },
+  "gruvbox-material": { "branch": "master", "commit": "f4b9fd3b4795fe138aea93dd098112442108d277" },
   "lazy.nvim": { "branch": "main", "commit": "72b38999bc547a96c769d1de964a846570cfe5d1" },
   "lsp_signature.nvim": { "branch": "master", "commit": "600b2729ad8649d0745c76c55f5fd7586713d6dd" },
   "lspkind.nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
@@ -38,5 +39,6 @@
   "toggleterm.nvim": { "branch": "main", "commit": "b02a1674bd0010d7982b056fd3df4f717ff8a57a" },
   "treesj": { "branch": "main", "commit": "9afe7983ce6351936a81d57adac651dc8f16c20b" },
   "trouble.nvim": { "branch": "main", "commit": "897542f90050c3230856bc6e45de58b94c700bbf" },
+  "vim-code-dark": { "branch": "master", "commit": "48d44707a821f962f56c3d0553144c77211749fa" },
   "which-key.nvim": { "branch": "main", "commit": "61553aeb3d5ca8c11eea8be6eadf478062982ac9" }
 }

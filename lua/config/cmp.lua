@@ -1,32 +1,7 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 local luasnip = require("luasnip")
-local lspconfig = require("lspconfig")
-local mason_lspconfig = require("mason-lspconfig")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-
-require("mason")
-mason_lspconfig.setup({
-    ensure_installed = {
-        "tsserver",
-        "emmet_ls",
-        "sqls",
-        "pyright",
-        "jdtls",
-        "bashls",
-        "omnisharp",
-        "omnisharp_mono",
-        "clangd",
-        "gopls",
-        "sumneko_lua",
-    },
-})
-mason_lspconfig.setup_handlers({
-    function(server_name)
-        lspconfig[server_name].setup({})
-    end,
-})
-lspconfig["gdscript"].setup({})
 
 require("luasnip.loaders.from_vscode").lazy_load()
 

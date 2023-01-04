@@ -54,7 +54,6 @@ require("lazy").setup({
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
             "rafamadriz/friendly-snippets",
-            "onsails/lspkind.nvim",
         },
         config = function()
             require("config.cmp")
@@ -87,6 +86,14 @@ require("lazy").setup({
         },
         config = function()
             require("nvim-tree").setup()
+            vim.api.nvim_create_autocmd("BufEnter", {
+                nested = true,
+                    callback = function()
+                        if #vim.api.nvim_list_wins() == 1 and require("nvim-tree.utils").is_nvim_tree_buf() then
+                            vim.cmd "quit"
+                    end
+                end
+            })
         end
     },
     {

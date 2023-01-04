@@ -88,10 +88,17 @@ require("lazy").setup({
     },
     {
         "nvim-lualine/lualine.nvim",
+        enabled = false,
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require("lualine").setup()
         end,
+    },
+    {
+        "echasnovski/mini.statusline",
+        config = function()
+            require('mini.statusline').setup()
+        end
     },
     {
         "folke/trouble.nvim",
@@ -286,8 +293,6 @@ require("lazy").setup({
         "catppuccin/nvim",
         name = "catppuccin",
     },
-    "tomasiser/vim-code-dark",
-    "sainnhe/gruvbox-material",
 })
 
 vim.o.expandtab = true

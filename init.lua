@@ -46,7 +46,7 @@ require("lazy").setup({
     },
     {
         "hrsh7th/nvim-cmp",
-        event = { "InsertEnter" },
+        event = { "VeryLazy", "InsertEnter" },
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-buffer",
@@ -296,6 +296,16 @@ require("lazy").setup({
         config = function()
             require("treesj").setup()
         end,
+    },
+    {
+        "vim-test/vim-test",
+        cmd = {
+            "TestNearest",
+            "TestFile",
+            "TestSuite",
+            "TestLast",
+            "TestVisit",
+        },
     },
 
     -- themes

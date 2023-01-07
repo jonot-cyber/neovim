@@ -307,6 +307,23 @@ require("lazy").setup({
             "TestVisit",
         },
     },
+    {
+        "ray-x/go.nvim",
+        ft = { "go" },
+        config = function ()
+            require("go").setup()
+        end,
+    },
+    {
+        "goolord/alpha-nvim",
+        config = function ()
+            require("alpha").setup(require("alpha.themes.startify").config)
+        end
+    },
+    {
+        "easymotion/vim-easymotion",
+        keys = "<Leader><Leader>",
+    },
 
     -- themes
     {

@@ -46,14 +46,12 @@ require("lazy").setup({
     },
     {
         "hrsh7th/nvim-cmp",
+        enabled = false,
         event = { "VeryLazy", "InsertEnter" },
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-buffer",
             "neovim/nvim-lspconfig",
-            "L3MON4D3/LuaSnip",
-            "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
         },
         config = function()
             require("config.cmp")
@@ -108,6 +106,13 @@ require("lazy").setup({
         "echasnovski/mini.statusline",
         config = function()
             require('mini.statusline').setup()
+        end
+    },
+    {
+        "ms-jpq/coq_nvim",
+        dependencies = {"ms-jpq/coq.artifacts"},
+        config = function()
+            vim.cmd("COQnow -s")
         end
     },
     {

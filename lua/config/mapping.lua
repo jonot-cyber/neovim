@@ -107,7 +107,7 @@ wk.register({
     ["gz"] = {
         "<cmd>TSJToggle<cr>",
         "Toggle node splits",
-    }
+    },
 })
 
 vim.api.nvim_set_keymap("x", "J", '<cmd>STSSelectNextSiblingNode<cr>', {})

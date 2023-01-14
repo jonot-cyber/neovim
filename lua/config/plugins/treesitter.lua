@@ -6,4 +6,9 @@ M.highlight = {
     enable = true,
 }
 
+M.indent = {
+    enable = true,
+    disable = { "python", "gdscript", },
+}
+
 return M

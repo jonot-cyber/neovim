@@ -182,6 +182,7 @@ require("lazy").setup({
         name = "catppuccin",
     },
     "folke/tokyonight.nvim",
+    "navarasu/onedark.nvim",
 })
 
 require("config.plugins.mason")

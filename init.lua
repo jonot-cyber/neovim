@@ -8,7 +8,7 @@ vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.nu = true
 vim.o.shiftwidth = 4
--- vim.o.smartindent = true
+vim.o.smartindent = true
 vim.o.tabstop = 4
 
 vim.cmd("colorscheme catppuccin")

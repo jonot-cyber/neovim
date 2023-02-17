@@ -60,7 +60,7 @@ require("lazy").setup({
         "folke/which-key.nvim",
         event = "VeryLazy",
         config = function()
-            require("config.plugins.which_key")
+            require("config.plugins.which-key")
         end,
     },
     {
@@ -79,7 +79,7 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require("lualine").setup()
+            require("lualine").setup({})
         end,
     },
     {
@@ -173,6 +173,21 @@ require("lazy").setup({
         dependencies = {"kevinhwang91/promise-async"},
         config = function()
             require("config.plugins.ufo")
+        end,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        dependencies = {"nvim-treesitter/nvim-treesitter"},
+        event = "VeryLazy",
+        config = function()
+            require("treesitter-context").setup(require("config.plugins.treesitter-context"))
+        end,
+    },
+    "gpanders/nvim-parinfer",
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("indent_blankline").setup(require("config.plugins.indent-blankline"))
         end,
     },
 

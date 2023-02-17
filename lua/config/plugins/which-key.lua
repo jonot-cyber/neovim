@@ -4,7 +4,10 @@ local wk = require("which-key")
 
 wk.register({
     ["<C-n>"] = {
-        "<cmd>NvimTreeToggle<cr>",
+        function ()
+            local api = require("nvim-tree.api")
+            api.tree.toggle()
+        end,
         "Open Tree",
     },
     ["<C-s>"] = {
@@ -13,11 +16,17 @@ wk.register({
     },
     ["<leader>"] = {
         f = {
-            "<cmd>Telescope find_files<cr>",
+            function ()
+                local builtin = require("telescope.builtin")
+                builtin.find_files()
+            end,
             "Find files with telescope"
         },
         c = {
-            "<cmd>Telescope commands<cr>",
+            function()
+                local builtin = require("telescope.builtin")
+                builtin.commands()
+            end,
             "Run command with telescope"
         },
         d = {
@@ -25,15 +34,26 @@ wk.register({
             "Run telescope",
         },
         t = {
-            "<cmd>ToggleTerm<cr>",
+            function()
+                local Terminal = require("toggleterm.terminal").Terminal
+                Terminal:new():toggle()
+            end,
             "Toggle Terminal",
         },
         g = {
-            "<cmd>Neogit<cr>",
+            function()
+                local neogit = require("neogit")
+                neogit.open({
+                    kind = "floating",
+                })
+            end,
             "Open Git UI",
         },
         a = {
-            "<cmd>ChatGPT<cr>",
+            function()
+                local chatgpt = require("chatgpt")
+                chatgpt.openChat()
+            end,
             "Ask chatgpt something",
         },
         s = {
@@ -58,6 +78,10 @@ wk.register({
             function() vim.lsp.buf.format({async = true}) end,
             "Format",
         },
+        ["<space>"] = {
+            "<cmd>Telescope<CR>",
+            "Quick open things",
+        }
     },
     ["[d"] = {
         function() vim.diagnostic.goto_prev() end,
@@ -84,6 +108,12 @@ wk.register({
     K = {
         function() vim.lsp.buf.hover() end,
         "Lsp hover",
+    },
+})
+
+wk.setup({
+    window = {
+        border = "single",
     },
 })
 

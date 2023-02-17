@@ -43,9 +43,7 @@ wk.register({
         g = {
             function()
                 local neogit = require("neogit")
-                neogit.open({
-                    kind = "floating",
-                })
+                neogit.open({})
             end,
             "Open Git UI",
         },

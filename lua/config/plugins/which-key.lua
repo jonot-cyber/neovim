@@ -1,3 +1,7 @@
+--[[
+-- I'm using which-key to handle mappings
+-- not much to say about it, but it lets you create nice nested mappings so good 
+--]]
 local M = {}
 
 local wk = require("which-key")

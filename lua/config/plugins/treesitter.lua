@@ -3,7 +3,7 @@
 --]]
 local M = {}
 
-M.ensure_installed = "all" -- Automatically install all parsers because I want to.
+-- M.ensure_installed = "all" -- Automatically install all parsers because I want to.
 
 M.highlight = {
     enable = true, -- enable highlighting
@@ -11,7 +11,7 @@ M.highlight = {
 
 M.indent = {
     enable = true, -- Had some issues with regular indents with stuff like dart, thought this might help
-    disable = { "python", "gdscript", }, -- these don't work
+    disable = { "python", "gdscript", "julia", }, -- these don't work
 }
 
 return M

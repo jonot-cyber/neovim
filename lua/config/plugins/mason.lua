@@ -41,4 +41,6 @@ mason_lspconfig.setup_handlers({ -- Automatically create handlers for installed 
     end,
 })
 
+lspconfig.zls.setup{}
+
 return M
